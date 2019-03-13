@@ -7,7 +7,8 @@
         "build": "vue-cli-service build --target lib --name VeTable src/index.js",
         "lint": "vue-cli-service lint",
         "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs"
+        "docs:build": "vuepress build docs",
+        "prepublish": "npm run build"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "^3.5.0",
