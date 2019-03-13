@@ -1,29 +1,60 @@
 # vue-element-table
 
-## Project setup
-```
-yarn install
+> A simple, customizable and pageable table, based on vue2 and element-ui@2.x.
+
+[中文文档](README.CN.md)
+
+## Install
+
+```bash
+yarn add @spring/vue-element-table
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
+## Usage
+
+### Fully import
+
+In main.js:
+
+```js
+import VeTable from '@spring/vue-element-table'
+import '@spring/vue-element-table/dist/VeTable.css';
+
+Vue.use(VeTable);
 ```
 
-### Compiles and minifies for production
+The above imports Element entirely. Note that CSS file needs to be imported separately.
+
+Now, just use it:
+
+```vue
+<ve-table :data="data"></ve-table>
+
+<ve-table-sync :http-request="request"></ve-table-sync>
+
+<ve-tree-table :data="data"></ve-tree-table>
 ```
+
+### On demand
+
+<b>Todo.</b>
+
+## Dev Setup
+
+``` bash
+
+# install dependencies
+yarn
+
+# build for production with minification
 yarn run build
-```
 
-### Run your tests
-```
+# run eslint and fix code style
+npm run lint
+
+# run all tests
 yarn run test
+
 ```
 
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+For a detailed explanation on how things work, contact us <www.389055604@qq.com>.
