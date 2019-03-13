@@ -1,36 +1,44 @@
 {
-  "name": "vue-element-table",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "vue": "^2.6.6"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.0",
-    "@vue/cli-plugin-eslint": "^3.5.0",
-    "@vue/cli-service": "^3.5.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "fibers": "^3.1.1",
-    "lint-staged": "^8.1.4",
-    "sass": "^1.17.2",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+    "name": "@spring/vue-element-table",
+    "version": "0.1.0",
+    "main": "./dist/VeTable.common.js",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build --target lib --name VeTable src/index.js",
+        "lint": "vue-cli-service lint",
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.5.0",
+        "@vue/cli-plugin-eslint": "^3.5.0",
+        "@vue/cli-service": "^3.5.0",
+        "@vue/eslint-config-prettier": "^4.0.1",
+        "babel-eslint": "^10.0.1",
+        "babel-plugin-lodash": "^3.3.4",
+        "eslint": "^5.8.0",
+        "eslint-plugin-vue": "^5.0.0",
+        "fibers": "^3.1.1",
+        "lint-staged": "^8.1.0",
+        "lodash": "^4.17.11",
+        "lodash-webpack-plugin": "^0.11.5",
+        "sass": "^1.17.2",
+        "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.5.21",
+        "vuepress": "^0.14.10"
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,vue}": [
+            "vue-cli-service lint",
+            "git add"
+        ]
+    },
+    "peerDependencies": {
+        "axios": "^0.18.0",
+        "element-ui": "^2.4.7",
+        "vue": "^2.6.6"
+    }
 }
