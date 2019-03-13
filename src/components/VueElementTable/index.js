@@ -6,7 +6,7 @@ VeTable.install = function(Vue) {
 };
 
 VeTableSync.install = function(Vue) {
-    Vue.component(VeTable.name, VeTableSync);
+    Vue.component(VeTableSync.name, VeTableSync);
 };
 
 const install = function(Vue) {
