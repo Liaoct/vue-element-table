@@ -1,7 +1,10 @@
 {
     "name": "@spring/vue-element-table",
     "version": "0.1.2",
-    "main": "./dist/VeTable.common.js",
+    "description": "A simple, customizable and pageable table, based on vue2 and element-ui.",
+    "author": "SpringLiao <389055604@qq.com>",
+    "main": "dist/data-tables.min.js",
+    "homepage": "http://192.168.100.231/km-group/vue-element-table",
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --target lib --name VeTable src/index.js",
