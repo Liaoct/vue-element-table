@@ -1,4 +1,5 @@
 import { merge } from 'lodash';
+import '../style/index.scss';
 
 const DefaultPaginationProps = {
     pageSizes: [10, 20, 50, 100],
