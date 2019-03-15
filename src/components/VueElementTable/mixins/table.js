@@ -111,6 +111,8 @@ export default {
             pagination: this.paginationShow ? (
                 <el-pagination
                     ref="elPagination"
+                    class={'ve-table__pagination'}
+                    background
                     {...{
                         attrs: this.innerPaginationProps,
                         on: {
@@ -171,6 +173,7 @@ export default {
         handleSizeChange(size) {
             this.innerPageSize = size;
             this.$emit('size-change', size);
+            this.$emit('pagination-change', { pageSize: size, currentPage: this.innerCurrentPage });
         },
         handlePrevClick(page) {
             this.$emit('prev-click', page);
@@ -181,6 +184,7 @@ export default {
         handleCurrentChange(page) {
             this.innerCurrentPage = page;
             this.$emit('current-page-change', page);
+            this.$emit('pagination-change', { pageSize: this.innerPageSize, currentPage: page });
         }
     },
     watch: {
