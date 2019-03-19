@@ -173,8 +173,6 @@ export default {
     methods: {
         handleSizeChange(size) {
             this.innerPageSize = size;
-            this.$emit('size-change', size);
-            this.$emit('pagination-change', { pageSize: size, currentPage: this.innerCurrentPage });
         },
         handlePrevClick(page) {
             this.$emit('prev-click', page);
@@ -184,8 +182,6 @@ export default {
         },
         handleCurrentChange(page) {
             this.innerCurrentPage = page;
-            this.$emit('current-page-change', page);
-            this.$emit('pagination-change', { pageSize: this.innerPageSize, currentPage: page });
         }
     },
     watch: {
@@ -200,8 +196,18 @@ export default {
                 this.innerPageSize = val;
             }
         },
-        innerPageSize(val) {
-            this.$emit('update:pageSize', val);
+        innerPageSize(newVal, oldVal) {
+            this.$nextTick(() => {
+                this.innerPageSize = newVal;
+                if (oldVal !== newVal) {
+                    this.$emit('update:pageSize', newVal);
+                    this.$emit('size-change', this.innerPageSize);
+                    this.$emit('pagination-change', {
+                        pageSize: this.innerPageSize,
+                        currentPage: this.internalCurrentPage
+                    });
+                }
+            });
         },
         currentPage: {
             immediate: true,
@@ -209,8 +215,18 @@ export default {
                 this.innerCurrentPage = val;
             }
         },
-        innerCurrentPage(val) {
-            this.$emit('update:currentPage', val);
+        innerCurrentPage(newVal, oldVal) {
+            this.$nextTick(() => {
+                this.internalCurrentPage = newVal;
+                if (oldVal !== newVal) {
+                    this.$emit('update:currentPage', newVal);
+                    this.$emit('current-page-change', this.internalCurrentPage);
+                    this.$emit('pagination-change', {
+                        pageSize: this.innerPageSize,
+                        currentPage: this.internalCurrentPage
+                    });
+                }
+            });
         },
         paginationProps: {
             immediate: true,

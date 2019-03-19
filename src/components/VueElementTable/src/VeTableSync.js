@@ -95,8 +95,6 @@ export default {
                 this.handleHttpRequest({ pageSize: size });
             }
             this.innerPageSize = size;
-            this.$emit('size-change', size);
-            this.$emit('pagination-change', { pageSize: size, currentPage: this.innerCurrentPage });
         },
         /**
          * @override
@@ -106,8 +104,6 @@ export default {
                 this.handleHttpRequest({ currentPage: page });
             }
             this.innerCurrentPage = page;
-            this.$emit('current-page-change', page);
-            this.$emit('pagination-change', { pageSize: this.innerPageSize, currentPage: page });
         }
     },
     watch: {
