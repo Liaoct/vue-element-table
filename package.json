@@ -3,7 +3,7 @@
     "version": "0.1.5",
     "description": "A simple, customizable and pageable table, based on vue2 and element-ui.",
     "author": "SpringLiao <389055604@qq.com>",
-    "main": "dist/VeTable.commom.js",
+    "main": "dist/VeTable.common.js",
     "homepage": "http://192.168.100.231/km-group/vue-element-table",
     "scripts": {
         "serve": "vue-cli-service serve",
