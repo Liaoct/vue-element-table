@@ -44,12 +44,14 @@ export default {
         }
     },
     methods: {
-        _httpRequest(...arg) {
-            if (isFunction(this.httpRequest)) return this.httpRequest(...arg);
+        _httpRequest({ pageSize, currentPage, ...other }, ...rest) {
+            if (isFunction(this.httpRequest))
+                return this.httpRequest({ pageSize, currentPage, ...other }, ...rest);
             const options = { method: 'get', ...this.httpRequest };
             const queryInfo = {
-                [this.propsMap.pageSize]: arg[0].pageSize,
-                [this.propsMap.currentPage]: arg[0].currentPage
+                [this.propsMap.pageSize]: pageSize,
+                [this.propsMap.currentPage]: currentPage,
+                ...other
             };
             if (options.method === 'get') {
                 options.params = Object.assign({}, options.params || {}, queryInfo);
@@ -61,14 +63,15 @@ export default {
                 if (res.status === 200) return res.data;
             });
         },
-        handleHttpRequest({ pageSize, currentPage } = {}) {
+        handleHttpRequest({ pageSize, currentPage, ...other } = {}, ...rest) {
             this.innerLoading = true;
 
             const payload = {
                 pageSize: pageSize || this.innerPageSize,
-                currentPage: currentPage || this.innerCurrentPage
+                currentPage: currentPage || this.innerCurrentPage,
+                ...other
             };
-            Promise.resolve(this._httpRequest(payload))
+            Promise.resolve(this._httpRequest(payload, ...rest))
                 .then(val => {
                     // 当请求返回时，当前页已经改变（一般出现在快速切换分页时），不做处理
                     const isCurrent =
@@ -86,6 +89,12 @@ export default {
                     this.innerLoading = false;
                 })
                 .catch(() => (this.innerLoading = false));
+        },
+        /**
+         * @public
+         */
+        doRequest(...arg) {
+            this.handleHttpRequest(...arg);
         },
         /**
          * @override
