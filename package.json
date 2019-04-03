@@ -1,6 +1,6 @@
 {
     "name": "@spring/vue-element-table",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "description": "A simple, customizable and pageable table, based on vue2 and element-ui.",
     "author": "SpringLiao <389055604@qq.com>",
     "main": "dist/VeTable.common.js",
