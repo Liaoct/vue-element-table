@@ -1,5 +1,6 @@
 import { merge } from 'lodash';
 import '../style/index.scss';
+import { delegate } from '../../../utils/vDom';
 
 const DefaultPaginationProps = {
     pageSizes: [10, 20, 50, 100],
@@ -183,6 +184,19 @@ export default {
         handleCurrentChange(page) {
             this.innerCurrentPage = page;
         }
+    },
+    mounted() {
+        delegate.call(this, this.$refs.elTable, [
+            'clearSelection',
+            'toggleRowSelection',
+            'toggleAllSelection',
+            'toggleRowExpansion',
+            'setCurrentRow',
+            'clearSort',
+            'clearFilter',
+            'doLayout',
+            'sort'
+        ]);
     },
     watch: {
         // make innerCurrentPage and innerPageSize as data,
