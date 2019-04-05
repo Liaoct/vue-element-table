@@ -5,9 +5,8 @@ export default {
     mixins: [Table],
     computed: {
         curTableData() {
-            if (this.paginationShow) {
-                let totalPage = this.innerTotal / this.innerPageSize;
-                let ceilTotalPage = Math.ceil(totalPage);
+            if (this.paginationShow && this.innerTotal) {
+                let ceilTotalPage = Math.ceil(this.innerTotal / this.innerPageSize);
                 if (this.innerCurrentPage > ceilTotalPage) {
                     console.warn(
                         `[ve-table]: currentPage ${
