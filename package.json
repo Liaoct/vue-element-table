@@ -13,6 +13,9 @@
         "docs:build": "vuepress build docs",
         "prepublish": "npm run build"
     },
+    "dependencies": {
+        "core-js": "^2.6.5"
+    },
     "devDependencies": {
         "@vue/cli-plugin-babel": "^3.5.0",
         "@vue/cli-plugin-eslint": "^3.5.0",
@@ -23,7 +26,7 @@
         "eslint": "^5.8.0",
         "eslint-plugin-vue": "^5.0.0",
         "fibers": "^3.1.1",
-        "lint-staged": "^8.1.0",
+        "lint-staged": "^8.1.4",
         "lodash": "^4.17.11",
         "lodash-webpack-plugin": "^0.11.5",
         "sass": "^1.17.2",
@@ -42,7 +45,7 @@
     },
     "peerDependencies": {
         "axios": "^0.18.0",
-        "element-ui": "^2.4.7",
+        "element-ui": "^2.6.3",
         "vue": "^2.6.6"
     }
 }
