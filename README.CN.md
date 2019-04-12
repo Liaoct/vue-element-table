@@ -4,6 +4,60 @@
 
 [英文文档](README.md)
 
+## 简单示例
+
+```
+<template>
+    <ve-table :data="tableData" :columns="columns"></ve-table>
+</template>
+
+<script>
+    import Mock from 'mockjs';
+
+    export default {
+        data() {
+            return {
+                tableData: (() =>
+                    {
+                        const data = [];
+                        for (let i = 0; i < 50; i++) {
+                            data.push(Mock.mock({
+                                date: '@date',
+                                name: '@cname',
+                                address: '@county(true)'
+                            }))
+                        }
+                        return data;
+                    }
+                )(),
+                columns: [
+                    {
+                        prop: 'date',
+                        label: '日期',
+                        width: 180
+                    },
+                    {
+                        prop: 'name',
+                        label: '姓名',
+                        width: 180
+                    },
+                    {
+                        prop: 'address',
+                        label: '地址',
+                    }
+                ]
+            }
+        }
+    }
+</script>
+```
+
+你将获得如下效果。
+
+![](./public/images/demo.png)
+
+更多详细内容参考 [vue-element-table](https://springliao.github.io/vue-element-table/).
+
 ## 安装
 
 ```bash
@@ -56,5 +110,10 @@ npm run lint
 yarn run test
 
 ```
+
+## 如果你想请我喝咖啡
+
+![](./public/images/alipay.png)
+![](./public/images/wechatpay.png)
 
 获取更多详细信息或帮助，请联系 <www.389055604@qq.com>。
