@@ -4,6 +4,7 @@ const escapeHtml = require('./util/util').escapeHtml;
 
 module.exports = {
     title: 'vue-element-table',
+    base: '/vue-element-table/',
     description: 'A simple, customizable and pageable table, based on vue2 and element-ui.',
     host: 'localhost',
     locales: {
