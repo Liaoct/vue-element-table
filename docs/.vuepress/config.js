@@ -18,6 +18,10 @@ module.exports = {
         }
     },
     themeConfig: {
+        repo: 'SpringLIAO/vue-element-table',
+        // 假如文档不是放在仓库的根目录下：
+        docsDir: 'docs',
+        editLinks: true,
         locales: {
             '/': {
                 // 多语言下拉菜单的标题
@@ -33,6 +37,8 @@ module.exports = {
                         buttonText: "刷新"
                     }
                 },
+                // 默认为 "Edit this page"
+                editLinkText: '帮助我们改善此页面！',
                 // 当前 locale 的 algolia docsearch 选项
                 algolia: {},
                 sidebar: [
