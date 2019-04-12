@@ -1,6 +1,6 @@
 # 动作列
 
-## 快速生成动作列 
+## 快速生成动作列
 
 通过`action-column`属性，可以快速常见动作列。
 
@@ -41,13 +41,13 @@
 ## 自定义动作列
 
 快速生成动作列只支持按钮形式，不支持按列定制。如果有需要，可以通过`slot-scope`来自定义动作列。实际上这就是`el-table`的
-[自定义列模板]()方法。
+[自定义列模板](http://element-cn.eleme.io/2.0/#/zh-CN/component/table)方法。
 
 <ClientOnly>
 <CodeExample title="多功能的动作列" description="可以通过`slot-scope`来自定义动作列。">
 <CustomAction slot="example" />
 ::: code docs/.vuepress/components/CustomAction.vue
-使用`el-table`的[自定义列模板]()方法可以生成功能丰富的动作列。当既使用了`columns`属性，又使用了`el-table-column`时，
+使用`el-table`的[自定义列模板](http://element-cn.eleme.io/2.0/#/zh-CN/component/table)方法可以生成功能丰富的动作列。当既使用了`columns`属性，又使用了`el-table-column`时，
 `columns`规定的列将显示在签名，而`action-column`规定的列始终显示在末尾。
 :::
 </CodeExample>

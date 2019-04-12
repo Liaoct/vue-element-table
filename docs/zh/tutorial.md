@@ -2,10 +2,10 @@
 
 ## 渲染数据
 
-同`el-table`一样，我们通过`data`属性为`ve-element-table`传入数据，并通过[el-table-column]()来定义表格的列。
+同`el-table`一样，我们通过`data`属性为`ve-element-table`传入数据，并通过[el-table-column](http://element-cn.eleme.io/2.0/#/zh-CN/component/table)来定义表格的列。
 
 实际上，`data`属性最终传给了内置的`el-table`组件，所有的`el-table-column`也同样的被作为默认插槽传给了`el-table`组件。
-关于如何利用`data`属性和`el-table-column`去渲染表格，请参考[el-table]()文档。
+关于如何利用`data`属性和`el-table-column`去渲染表格，请参考[el-table](http://element-cn.eleme.io/2.0/#/zh-CN/component/table)文档。
 
 <ClientOnly>
 <CodeExample title="基础表格" description="同原生`el-table`组件使用方式一样，创建带有分页器的基础表格。默认分页器的`currentPage`为`1`，`pageSize`为`10`。">
@@ -51,7 +51,7 @@
 
 ## 传递prop给内置的`el-table`
 
-`ve-element-table`只是`el-table`的高阶组件，因此它完全代理了`el-table`的所有属性与方法。你仍然可以先使用[el-table]()一样使用`ve-element-table`。
+`ve-element-table`只是`el-table`的高阶组件，因此它完全代理了`el-table`的所有属性与方法。你仍然可以先使用[el-table](http://element-cn.eleme.io/2.0/#/zh-CN/component/table)一样使用`ve-element-table`。
 
 <ClientOnly>
 <CodeExample title="传递prop" description="像使用`el-table`一样使用`ve-element-table`，例如设置`stripe`和`border`，监听`selection-change`事件。">
@@ -76,7 +76,7 @@
 </ClientOnly>
 
 ::: warning
-由于[el-pagination]()的`current-change`事件，与[el-table]()的`current-change`事件重名了，因此`ve-element-table`为`el-pagination`的`current-change`
+由于[el-pagination](http://element-cn.eleme.io/2.0/#/zh-CN/component/pagination)的`current-change`事件，与[el-table](http://element-cn.eleme.io/2.0/#/zh-CN/component/table)的`current-change`事件重名了，因此`ve-element-table`为`el-pagination`的`current-change`
 事件取了一个别名，叫`current-page-change`。
 :::
 

@@ -1,6 +1,6 @@
 # 快速上手
 ::: warning 注意
-请先安装 [Vue 2.x]()和[Element-ui 2.x]()。
+请先安装 [Vue 2.x](https://cn.vuejs.org/)和[Element-ui 2.x](http://element-cn.eleme.io/2.0/#/zh-CN)。
 :::
 
 ## 安装
@@ -11,11 +11,11 @@
 yarn add @spring/vue-element-ui
 ```
 
-如果想使用自动发起请求功能，你可能还需要安装[axios]()，本库使用`axios`作为HTTP客户端。当然，如果你想自己控制请求过程，则你不需要安装它。
+如果想使用自动发起请求功能，你可能还需要安装[axios](https://github.com/axios/axios)，本库使用`axios`作为HTTP客户端。当然，如果你想自己控制请求过程，则你不需要安装它。
 
 ## 引入element-ui
 
-本库依赖于[element-ui]()的`el-table`、`el-table-column`、`el-button`、`el-pagination`组件，因此在引入`vue-element-table`之前，你需要先引入以上组件。
+本库依赖于[element-ui](http://element-cn.eleme.io/2.0/#/zh-CN)的`el-table`、`el-table-column`、`el-button`、`el-pagination`组件，因此在引入`vue-element-table`之前，你需要先引入以上组件。
 
 **完整引入**
 
@@ -30,7 +30,7 @@ Vue.use(ElementUI);
 
 **使用国际化**
 
-由于`el-pgination`涉及到国际化，所以如果需要的话，请参考[文档]()进行设置。
+由于`el-pgination`涉及到国际化，所以如果需要的话，请参考[文档](http://element-cn.eleme.io/2.0/#/zh-CN/component/i18n)进行设置。
 
 ```js
 import locale from 'element-ui/lib/locale/lang/en'
@@ -40,7 +40,7 @@ Vue.use(ElementUI, { locale })
 
 **按需引入**
 
-请参考[element-ui]()官方文档。
+请参考[element-ui](http://element-cn.eleme.io/2.0/#/zh-CN)官方文档。
 
 ## 引入vue-element-table
 
@@ -85,16 +85,16 @@ TODO
 
 **使用源码**
 
-如果你想控制打包体积，则需要编译源码。本库源码依赖[lodash]()并采用`jsx`语法编写，而样式采用的是`scss`编写，所以你需要安装对应的依赖。
+如果你想控制打包体积，则需要编译源码。本库源码依赖[lodash](https://www.lodashjs.com/)并采用`jsx`语法编写，而样式采用的是`scss`编写，所以你需要安装对应的依赖。
 
 此处以`Vue cli 3.5.5`初始化并选择`dart-sass`作为样式处理器的项目为例。
 
 1. 安装依赖项。
 
-    - [`lodash`]()
-    - [`babel-plugin-lodash`]()
-    - [`lodash-webpack-plugin`]()
-    - [`@vue/babel-preset-jsx`]()
+    - [`lodash`](https://www.npmjs.com/package/lodash)
+    - [`babel-plugin-lodash`](https://www.npmjs.com/package/babel-plugin-lodash)
+    - [`lodash-webpack-plugin`](https://www.npmjs.com/package/lodash-webpack-plugin)
+    - [`@vue/babel-preset-jsx`](https://www.npmjs.com/package/@vue/babel-preset-app)
 
 2. 修改`vue.config.js`。
 
