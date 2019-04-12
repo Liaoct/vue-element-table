@@ -16,8 +16,6 @@ footer: MIT Licensed | Copyright © 2018-present Spring Liao
 
 <ClientOnly>
 <CodeExample>
-<BaseTable slot="example" />
+<BaseTable></BaseTable>
 </CodeExample>
 </ClientOnly>
-
-

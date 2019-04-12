@@ -59,7 +59,7 @@ export default {
                     }}
                     class={'ve-table__table'}
                 >
-                    {this.columns && this.columns.map(prop => <el-table-column {...{ attrs: prop }} />)}
+                    {this.columns && this.columns.map(prop => <el-table-column {...{ props: prop }} />)}
                     {this.$slots.default}
                     <template slot="empty">{this.$slots.empty}</template>
                     <template slot="append">{this.$slots.append}</template>
@@ -71,7 +71,7 @@ export default {
                                 scopedSlots: {
                                     default: scope => {
                                         return (
-                                            <div class="action-list">
+                                            <div class="ve-table__action-list">
                                                 {this.innerActionColumn.buttons.map(button => {
                                                     let buttonProps = Object.assign(
                                                         {
@@ -82,23 +82,22 @@ export default {
                                                     );
 
                                                     let clickHandler = function() {
-                                                        button.handler(
-                                                            scope.row,
-                                                            scope.column,
-                                                            scope.$index,
-                                                            scope.store
-                                                        );
+                                                        button.handler &&
+                                                            button.handler(
+                                                                scope.row,
+                                                                scope.column,
+                                                                scope.$index,
+                                                                scope.store
+                                                            );
                                                     };
 
                                                     return (
-                                                        <span>
-                                                            <el-button
-                                                                onClick={clickHandler}
-                                                                {...{ attrs: buttonProps }}
-                                                            >
-                                                                {button.label}
-                                                            </el-button>
-                                                        </span>
+                                                        <el-button
+                                                            onClick={clickHandler}
+                                                            {...{ attrs: buttonProps }}
+                                                        >
+                                                            {button.label}
+                                                        </el-button>
                                                     );
                                                 })}
                                             </div>
