@@ -8,7 +8,7 @@
 建议使用`yarn`安装。
 
 ```bash
-yarn add @spring/vue-element-ui
+yarn add @springliao/vue-element-ui
 ```
 
 如果想使用自动发起请求功能，你可能还需要安装[axios](https://github.com/axios/axios)，本库使用`axios`作为HTTP客户端。当然，如果你想自己控制请求过程，则你不需要安装它。
@@ -47,8 +47,8 @@ Vue.use(ElementUI, { locale })
 **完整引入**
 
 ```vue
-import VeTable from '@spring/vue-element-table';
-import '@spring/vue-element-table/dist/VeTable.css';
+import VeTable from '@springliao/vue-element-table';
+import '@springliao/vue-element-table/dist/VeTable.css';
 
 Vue.use(VeTable);
 ```
@@ -56,8 +56,8 @@ Vue.use(VeTable);
 **独立引入**
 
 ```vue
-import { VeTable, VeTableSync, VeTreeTable } from '@spring/vue-element-table';
-import '@spring/vue-element-table/dist/VeTable.css';
+import { VeTable, VeTableSync, VeTreeTable } from '@springliao/vue-element-table';
+import '@springliao/vue-element-table/dist/VeTable.css';
 
 Vue.component(VeTable.name, VeTable);
 Vue.component(VeTableSync.name, VeTableSync);
@@ -109,7 +109,7 @@ module.exports = {
             })
         ]
     },
-    transpileDependencies: ['@spring/vue-element-table']
+    transpileDependencies: ['@springliao/vue-element-table']
 }
 ```
 
@@ -125,7 +125,7 @@ module.exports = {
 4. 引入源码，并进行打包。
 
 ```js
-import VeTable from '@spring/vue-element-table/src/index.js';
+import VeTable from '@springliao/vue-element-table/src/index.js';
 ```
 
 当编译源码时，样式不需要单独引入。当进行打包时，样式文件也会一并打包。

@@ -1,55 +1,73 @@
 {
-    "name": "@spring/vue-element-table",
-    "version": "0.1.10",
-    "description": "A simple, customizable and pageable table, based on vue2 and element-ui.",
-    "author": "SpringLiao <389055604@qq.com>",
-    "main": "dist/VeTable.common.js",
-    "homepage": "http://192.168.100.231/km-group/vue-element-table",
-    "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build --target lib --name VeTable src/index.js",
-        "lint": "vue-cli-service lint",
-        "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs",
-        "prepublish": "npm run build"
-    },
-    "dependencies": {
-        "core-js": "^2.6.5"
-    },
-    "devDependencies": {
-        "@vue/cli-plugin-babel": "^3.5.0",
-        "@vue/cli-plugin-eslint": "^3.5.0",
-        "@vue/cli-service": "^3.5.0",
-        "@vue/eslint-config-prettier": "^4.0.1",
-        "axios": "^0.18.0",
-        "babel-eslint": "^10.0.1",
-        "babel-plugin-lodash": "^3.3.4",
-        "element-ui": "^2.7.2",
-        "eslint": "^5.8.0",
-        "eslint-plugin-vue": "^5.0.0",
-        "fibers": "^3.1.1",
-        "lint-staged": "^8.1.4",
-        "lodash": "^4.17.11",
-        "lodash-webpack-plugin": "^0.11.5",
-        "mockjs": "^1.0.1-beta3",
-        "normalize.css": "^8.0.1",
-        "sass": "^1.17.2",
-        "sass-loader": "^7.1.0",
-        "vue-template-compiler": "^2.5.21",
-        "vuepress": "^0.14.10"
-    },
-    "gitHooks": {
-        "pre-commit": "lint-staged"
-    },
-    "lint-staged": {
-        "*.{js,vue}": [
-            "vue-cli-service lint",
-            "git add"
-        ]
-    },
-    "peerDependencies": {
-        "axios": "^0.18.0",
-        "element-ui": "^2.6.3",
-        "vue": "^2.6.6"
-    }
+  "name": "@springliao/vue-element-table",
+  "version": "0.1.10",
+  "description": "A simple, customizable and pageable table, based on vue2 and element-ui.",
+  "author": "SpringLiao <389055604@qq.com>",
+  "main": "dist/VeTable.common.js",
+  "homepage": "http://192.168.100.231/km-group/vue-element-table",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name VeTable src/index.js",
+    "lint": "vue-cli-service lint",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "axios": "^0.18.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-lodash": "^3.3.4",
+    "element-ui": "^2.7.2",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "fibers": "^3.1.1",
+    "lint-staged": "^8.1.4",
+    "lodash": "^4.17.11",
+    "lodash-webpack-plugin": "^0.11.5",
+    "mockjs": "^1.0.1-beta3",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.17.2",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.21",
+    "vuepress": "^0.14.10"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "peerDependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.6.3",
+    "vue": "^2.6.6"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpringLIAO/vue-element-table.git"
+  },
+  "keywords": [
+    "vue",
+    "element",
+    "table",
+    "pagination",
+    "ui"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SpringLIAO/vue-element-table/issues"
+  }
 }

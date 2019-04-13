@@ -61,7 +61,7 @@
 ## 安装
 
 ```bash
-yarn add @spring/vue-element-table
+yarn add @springliao/vue-element-table
 ```
 
 ## 用法
@@ -71,8 +71,8 @@ yarn add @spring/vue-element-table
 在main.js中:
 
 ```js
-import VeTable from '@spring/vue-element-table'
-import '@spring/vue-element-table/dist/VeTable.css';
+import VeTable from '@springliao/vue-element-table'
+import '@springliao/vue-element-table/dist/VeTable.css';
 
 Vue.use(VeTable);
 ```

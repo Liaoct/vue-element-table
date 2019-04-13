@@ -61,7 +61,7 @@ More details visit [vue-element-table](https://springliao.github.io/vue-element-
 ## Install
 
 ```bash
-yarn add @spring/vue-element-table
+yarn add @springliao/vue-element-table
 ```
 
 ## Usage
@@ -71,8 +71,8 @@ yarn add @spring/vue-element-table
 In main.js:
 
 ```js
-import VeTable from '@spring/vue-element-table'
-import '@spring/vue-element-table/dist/VeTable.css';
+import VeTable from '@springliao/vue-element-table'
+import '@springliao/vue-element-table/dist/VeTable.css';
 
 Vue.use(VeTable);
 ```
