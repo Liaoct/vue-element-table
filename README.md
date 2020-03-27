@@ -56,12 +56,12 @@ You will got this.
 
 ![](./public/images/demo.png)
 
-More details visit [vue-element-table](https://springliao.github.io/vue-element-table/).
+More details visit [vue-element-table](https://liaoct.github.io/vue-element-table/).
 
 ## Install
 
 ```bash
-yarn add @springliao/vue-element-table
+yarn add @liaoct/vue-element-table
 ```
 
 ## Usage
@@ -71,8 +71,8 @@ yarn add @springliao/vue-element-table
 In main.js:
 
 ```js
-import VeTable from '@springliao/vue-element-table'
-import '@springliao/vue-element-table/dist/VeTable.css';
+import VeTable from '@liaoct/vue-element-table';
+import '@liaoct/vue-element-table/dist/VeTable.css';
 
 Vue.use(VeTable);
 ```
@@ -95,7 +95,7 @@ Now, just use it:
 
 ## Dev Setup
 
-``` bash
+```bash
 
 # install dependencies
 yarn

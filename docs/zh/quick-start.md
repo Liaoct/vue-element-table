@@ -1,4 +1,5 @@
 # 快速上手
+
 ::: warning 注意
 请先安装 [Vue 2.x](https://cn.vuejs.org/)和[Element-ui 2.x](http://element-cn.eleme.io/2.0/#/zh-CN)。
 :::
@@ -8,12 +9,12 @@
 建议使用`yarn`安装。
 
 ```bash
-yarn add @springliao/vue-element-ui
+yarn add @liaoct/vue-element-ui
 ```
 
-如果想使用自动发起请求功能，你可能还需要安装[axios](https://github.com/axios/axios)，本库使用`axios`作为HTTP客户端。当然，如果你想自己控制请求过程，则你不需要安装它。
+如果想使用自动发起请求功能，你可能还需要安装[axios](https://github.com/axios/axios)，本库使用`axios`作为 HTTP 客户端。当然，如果你想自己控制请求过程，则你不需要安装它。
 
-## 引入element-ui
+## 引入 element-ui
 
 本库依赖于[element-ui](http://element-cn.eleme.io/2.0/#/zh-CN)的`el-table`、`el-table-column`、`el-button`、`el-pagination`组件，因此在引入`vue-element-table`之前，你需要先引入以上组件。
 
@@ -24,7 +25,6 @@ import Vue from 'vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-
 Vue.use(ElementUI);
 ```
 
@@ -33,42 +33,32 @@ Vue.use(ElementUI);
 由于`el-pgination`涉及到国际化，所以如果需要的话，请参考[文档](http://element-cn.eleme.io/2.0/#/zh-CN/component/i18n)进行设置。
 
 ```js
-import locale from 'element-ui/lib/locale/lang/en'
+import locale from 'element-ui/lib/locale/lang/en';
 
-Vue.use(ElementUI, { locale })
+Vue.use(ElementUI, { locale });
 ```
 
 **按需引入**
 
 请参考[element-ui](http://element-cn.eleme.io/2.0/#/zh-CN)官方文档。
 
-## 引入vue-element-table
+## 引入 vue-element-table
 
 **完整引入**
 
 ```vue
-import VeTable from '@springliao/vue-element-table';
-import '@springliao/vue-element-table/dist/VeTable.css';
-
+import VeTable from '@liaoct/vue-element-table'; import '@liaoct/vue-element-table/dist/VeTable.css';
 Vue.use(VeTable);
 ```
 
 **独立引入**
 
 ```vue
-import { VeTable, VeTableSync, VeTreeTable } from '@springliao/vue-element-table';
-import '@springliao/vue-element-table/dist/VeTable.css';
-
-Vue.component(VeTable.name, VeTable);
-Vue.component(VeTableSync.name, VeTableSync);
-Vue.component(VeTreeTable.name, VeTreeTable);
-/* 或写为
- * Vue.use(VeTable)
- * Vue.use(VeTableSync)
- * Vue.use(VeTreeTable)
- * 或者在组件中直接使用
- * components: { VeTable, VeTableSync, VeTreeTable }
- */
+import { VeTable, VeTableSync, VeTreeTable } from '@liaoct/vue-element-table'; import
+'@liaoct/vue-element-table/dist/VeTable.css'; Vue.component(VeTable.name, VeTable);
+Vue.component(VeTableSync.name, VeTableSync); Vue.component(VeTreeTable.name, VeTreeTable); /* 或写为 *
+Vue.use(VeTable) * Vue.use(VeTableSync) * Vue.use(VeTreeTable) * 或者在组件中直接使用 * components: { VeTable,
+VeTableSync, VeTreeTable } */
 ```
 
 ::: tip 提示
@@ -109,8 +99,8 @@ module.exports = {
             })
         ]
     },
-    transpileDependencies: ['@springliao/vue-element-table']
-}
+    transpileDependencies: ['@liaoct/vue-element-table']
+};
 ```
 
 3. 修改`babel.config.js`。
@@ -125,7 +115,7 @@ module.exports = {
 4. 引入源码，并进行打包。
 
 ```js
-import VeTable from '@springliao/vue-element-table/src/index.js';
+import VeTable from '@liaoct/vue-element-table/src/index.js';
 ```
 
 当编译源码时，样式不需要单独引入。当进行打包时，样式文件也会一并打包。

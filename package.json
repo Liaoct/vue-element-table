@@ -1,10 +1,10 @@
 {
-  "name": "@springliao/vue-element-table",
+  "name": "@liaoct/vue-element-table",
   "version": "0.1.11",
   "description": "A simple, customizable and pageable table, based on vue2 and element-ui.",
-  "author": "SpringLiao <389055604@qq.com>",
+  "author": "liaoct <389055604@qq.com>",
   "main": "dist/VeTable.common.js",
-  "homepage": "http://192.168.100.231/km-group/vue-element-table",
+  "homepage": "https://github.com/liaoct/vue-element-table",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name VeTable src/index.js",
@@ -14,29 +14,33 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "core-js": "^2.6.5"
+    "core-js": "^2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.0",
-    "@vue/cli-plugin-eslint": "^3.5.0",
-    "@vue/cli-service": "^3.5.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "axios": "^0.18.0",
-    "babel-eslint": "^10.0.1",
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "axios": "^0.18.1",
+    "babel-eslint": "^10.0.3",
     "babel-plugin-lodash": "^3.3.4",
-    "element-ui": "^2.7.2",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "fibers": "^3.1.1",
-    "lint-staged": "^8.1.4",
-    "lodash": "^4.17.11",
+    "element-ui": "^2.13.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-lodash": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^6.1.2",
+    "fibers": "^4.0.2",
+    "lint-staged": "^9.5.0",
+    "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.5",
     "mockjs": "^1.0.1-beta3",
     "normalize.css": "^8.0.1",
-    "sass": "^1.17.2",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21",
-    "vuepress": "^0.14.10"
+    "prettier": "^1.19.1",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.4.0"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -57,7 +61,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SpringLIAO/vue-element-table.git"
+    "url": "git+https://github.com/liaoct/vue-element-table.git"
   },
   "keywords": [
     "vue",
@@ -68,6 +72,6 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SpringLIAO/vue-element-table/issues"
+    "url": "https://github.com/liaoct/vue-element-table/issues"
   }
 }

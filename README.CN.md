@@ -1,6 +1,6 @@
 # vue-element-table
 
-> 基于Vue 2和Element-ui@2.x的可自由定制的、带有分页功能的Table组件.
+> 基于 Vue 2 和 Element-ui@2.x 的可自由定制的、带有分页功能的 Table 组件.
 
 [英文文档](README.md)
 
@@ -56,28 +56,28 @@
 
 ![](./public/images/demo.png)
 
-更多详细内容参考 [vue-element-table](https://springliao.github.io/vue-element-table/).
+更多详细内容参考 [vue-element-table](https://liaoct.github.io/vue-element-table/).
 
 ## 安装
 
 ```bash
-yarn add @springliao/vue-element-table
+yarn add @liaoct/vue-element-table
 ```
 
 ## 用法
 
 ### 全量引入
 
-在main.js中:
+在 main.js 中:
 
 ```js
-import VeTable from '@springliao/vue-element-table'
-import '@springliao/vue-element-table/dist/VeTable.css';
+import VeTable from '@liaoct/vue-element-table';
+import '@liaoct/vue-element-table/dist/VeTable.css';
 
 Vue.use(VeTable);
 ```
 
-上面的代码会将VeTable全部引入，但是不要忘了CSS文件要单独引入。
+上面的代码会将 VeTable 全部引入，但是不要忘了 CSS 文件要单独引入。
 
 现在你可以按如下方式进行使用:
 
@@ -95,7 +95,7 @@ Vue.use(VeTable);
 
 ## 开发步骤
 
-``` bash
+```bash
 
 # 安装依赖
 yarn

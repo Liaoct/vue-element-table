@@ -1,14 +1,21 @@
-import { VeTable, VeTableSync } from './components/VueElementTable';
-import { VeTreeTable } from './components/TreeTable';
+import VeTable from './components/VeTable';
+import VeTableSync from './components/VeTableSync';
 
-const install = function(Vue) {
-    VeTable.install(Vue);
-    VeTableSync.install(Vue);
-    VeTreeTable.install(Vue);
+VeTable.install = function(Vue) {
+  Vue.component(VeTable.name, VeTable);
 };
 
-export { install, VeTable, VeTableSync, VeTreeTable };
+VeTableSync.install = function(Vue) {
+  Vue.component(VeTableSync.name, VeTableSync);
+};
+
+const install = function(Vue) {
+  VeTable.install(Vue);
+  VeTableSync.install(Vue);
+};
+
+export { install, VeTable, VeTableSync };
 
 export default {
-    install
+  install
 };
